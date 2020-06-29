@@ -22,6 +22,19 @@ module.exports = {
         },
       },
     },
+    {
+      use: "gridsome-plugin-flexsearch",
+      options: {
+        searchFields: ["title"],
+        collections: [
+          {
+            typeName: "Post",
+            indexName: "Post",
+            fields: ["title"],
+          },
+        ],
+      },
+    },
   ],
   templates: {
     // This is what the url path will end up being

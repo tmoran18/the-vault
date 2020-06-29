@@ -1,4 +1,27 @@
 body {
   background: #18191a;
   color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.content__title {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__title h1 {
+  margin-bottom: 6px;
 }

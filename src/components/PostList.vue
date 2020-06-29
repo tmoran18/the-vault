@@ -16,4 +16,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
 }
+h3 {
+  font-size: 18px;
+}
 </style>

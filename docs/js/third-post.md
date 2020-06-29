@@ -1,6 +1,6 @@
 ---
 title: Third Post
-type: html
+type: js
 author: tim
 ---
 

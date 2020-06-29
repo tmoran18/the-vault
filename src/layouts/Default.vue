@@ -1,16 +1,25 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link class="nav__link" to="/CSS/">CSS</g-link>
-      </nav>
+      <div class="logo">
+        <g-link class="home__link" to="/">Vault Docs</g-link>
+        <g-image src="../../assets/img/vault_logo_1.png" width="100" />
+      </div>
     </header>
-    <slot />
+    <div class="wrapper">
+      <aside class="sidebar">
+        <nav class="nav">
+          <g-link class="nav__link" to="/">Home</g-link>
+          <g-link class="nav__link" to="/HTML/">HTML</g-link>
+          <g-link class="nav__link" to="/CSS/">CSS</g-link>
+          <g-link class="nav__link" to="/Javascript/">JavaScript</g-link>
+          <g-link class="nav__link" to="/Python/">Python</g-link>
+        </nav>
+      </aside>
+    </div>
+    <div class="main-content">
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -32,21 +41,57 @@ body {
 }
 
 .layout {
-  max-width: 760px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  min-width: 240px;
+  padding: 20px;
+  background: #2a2c2f;
+}
+
+nav {
+  margin-top: 120px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link,
+.home__link {
+  color: white;
+  text-decoration: none;
+  padding: 5px 0px;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
 }
 
-.nav__link {
-  margin-left: 20px;
+.main-content {
+  margin-left: 300px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 240px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home__link {
+  font-size: 24px;
 }
 </style>
