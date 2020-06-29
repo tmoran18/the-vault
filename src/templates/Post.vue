@@ -22,9 +22,4 @@ query Post($path: String!) {
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif !important;
 }
-
-.shiki {
-  padding: 10px;
-  border-radius: 5px;
-}
 </style>

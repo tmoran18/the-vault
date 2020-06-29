@@ -1,6 +1,12 @@
 ---
-title: Media Queries
-author: tim
+title: Media Queries - Large to Small
+type: css
 ---
 
-This is all about media queries
+```css
+@media only screen and (max-width: 900px) {
+  body {
+    background-color: dodgerblue;
+  }
+}
+```

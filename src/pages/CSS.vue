@@ -1,28 +1,27 @@
 <template>
   <Layout>
-    <h1>CSS</h1>
-    <ul>
-      <div v-for="post in $page.allPost.edges" v-bind:key="post.node.title">
-        {{ post.node.title }} <br />
-      </div>
-      <div class="post-content">
-        <p v-html="$page.allPost.content" />
-      </div>
-    </ul>
+    <section class="posts">
+      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+    </section>
   </Layout>
 </template>
 
 <script>
+import PostList from "@/components/PostList";
 export default {
-  metaInfo: {
-    title: "CSS",
+  components: {
+    PostList
   },
+  metaInfo: {
+    title: "CSS Snippets"
+  }
 };
 </script>
 
+</page-query>
 <page-query>
     query {
-  allPost(filter: { type: { eq: "html" }}) {
+  allPost(filter: { type: { eq: "css" }}) {
     edges {
       node {
         title
@@ -32,3 +31,13 @@ export default {
   }
 }
 </page-query>
+
+
+<style>
+
+</style>
+
+
+
+
+
