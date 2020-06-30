@@ -15,6 +15,8 @@ export default {
 .shiki {
   padding: 10px;
   border-radius: 5px;
+  max-width: 720px;
+  font-size: 16px;
 }
 h3 {
   font-size: 18px;
