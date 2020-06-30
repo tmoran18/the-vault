@@ -25,7 +25,7 @@ export default {
 </page-query>
 <page-query>
     query {
-  allPost(filter: { type: { eq: "css" }}) {
+  allPost(sortBy: "title", order: ASC, filter: {type: { eq: "css" }}) {
     edges {
       node {
         title
