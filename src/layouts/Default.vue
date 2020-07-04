@@ -14,6 +14,7 @@
           <g-link class="nav__link" to="/CSS/">CSS</g-link>
           <g-link class="nav__link" to="/Javascript/">JavaScript</g-link>
           <g-link class="nav__link" to="/Python/">Python</g-link>
+          <g-link class="nav__link" to="/react/">React</g-link>
         </nav>
       </aside>
     </div>
